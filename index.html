@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <section
+            class="w-full h-screen p-3 flex flex-col items-center justify-center bg-[#F8FAFC]"
+        >
+            <div
+                class="card card-dash bg-base-100 p-2 sm:w-140 w-full rounded-lg shadow-md"
+            >
+                <div class="card-body sm:p-5 p-3">
+                    <!-- TOP -->
+                    <div class="w-full flex flex-col items-center">
+                        <img
+                            src="./assets/github-logo.png"
+                            alt="GitHub Logo"
+                            class="sm:size-25 size-15 mb-4"
+                        />
+                        <h2 class="font-bold text-xl">
+                            GitHub Issues Tracker
+                        </h2>
+                        <p class="text-gray-400 text-sm font-medium">
+                            Sign in to manage your issues
+                        </p>
+                    </div>
+                    <!-- FORM FIELDS -->
+                    <form
+                        id="loginForm"
+                        class="w-full sm:mt-5 mt-2 flex flex-col sm:gap-4 gap-2"
+                    >
+                        <div class="w-full">
+                            <label for="" class="font-medium sm:text-lg text-sm">Username</label>
+                            <input
+                                type="text"
+                                required
+                                id="usernameInput"
+                                placeholder="username"
+                                class="input w-full"
+                            />
+                        </div>
+                        <div class="w-full">
+                            <label for="" class="font-medium sm:text-lg text-sm">Password</label>
+                            <div class="flex items-center w-full relative">
+                                <input
+                                    type="password"
+                                    required
+                                    id="passwordInput"
+                                    placeholder="password"
+                                    class="input w-full"
+                                />
+                                <button
+                                    type="button"
+                                    id="showPassword"
+                                    class="absolute right-2 text-gray-500 cursor-pointer hover:scale-110 hover:text-gray-700 transition-all"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-5">
+                            Sign In
+                        </button>
+                    </form>
+                    <!-- BOTTOM -->
+                    <div class="w-full mt-5">
+                        <div
+                            class="w-full flex items-center justify-between gap-4"
+                        >
+                            <span class="w-full h-[1px] bg-gray-200"></span>
+                            <span>OR</span>
+                            <span class="w-full h-[1px] bg-gray-200"></span>
+                        </div>
+                        <p class="font-medium text-center text-gray-500 mt-2">
+                            Demo Credentials:
+                        </p>
+                        <div class="text-center bg-[#F8FAFC] p-5 rounded mt-2">
+                            <h4 class="font-medium leading-5 sm:text-[16px] text-sm">
+                                Username:
+                                <span
+                                    id="username"
+                                    class="text-gray-500 font-normal"
+                                    >admin</span
+                                >
+                            </h4>
+                            <h4 class="font-medium leading-5 sm:text-[16px] text-sm">
+                                Password:
+                                <span
+                                    id="password"
+                                    class="text-gray-500 font-normal"
+                                    >admin123</span
+                                >
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SCRIPTS -->
+        <script src="./js/Reuse.js"></script>
+        <script src="./js/Login.js"></script>
+    </body>
+</html>
